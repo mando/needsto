@@ -1,0 +1,17 @@
+:javascript
+  $(document).ready(function(){
+    $("#example").autocomplete("auto", {
+      /* TODO: replace with JSON parser */
+      formatItem: function(item) {
+        var tmp = eval('(' + item + ')');
+        return tmp.text;
+      }
+    }).result(function(event, item) {
+      /* TODO: replace with JSON parser */
+      var tmp = eval('(' + item + ')');
+      $("#example").val(tmp.text);
+      location.href = tmp.url;
+    });
+  });
+
+API Reference: <input id="example" /> (try "C" or "E")
