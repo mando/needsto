@@ -11,5 +11,5 @@ get '/auto' do
 end
 
 get '/mando' do
-  "MANDO RULES"
+  "Screw you, man.  MANDO RULES!"
 end
